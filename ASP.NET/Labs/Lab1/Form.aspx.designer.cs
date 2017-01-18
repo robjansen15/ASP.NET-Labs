@@ -10,7 +10,7 @@
 namespace Lab1 {
     
     
-    public partial class Default {
+    public partial class Form {
         
         /// <summary>
         /// form1 control.
@@ -65,6 +65,15 @@ namespace Lab1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox passwordInput;
+        
+        /// <summary>
+        /// passwordInputCheck control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox passwordInputCheck;
         
         /// <summary>
         /// personGender control.

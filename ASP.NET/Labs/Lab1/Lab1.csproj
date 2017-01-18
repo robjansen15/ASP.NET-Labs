@@ -65,6 +65,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="fonts\antic-regular-webfont.eot" />
+    <Content Include="fonts\antic-regular-webfont.ttf" />
+    <Content Include="fonts\antic-regular-webfont.woff" />
+    <None Include="Properties\PublishProfiles\Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -73,16 +77,54 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Default.aspx" />
+    <Content Include="css\style.css" />
+    <Content Include="fonts\antic-regular-webfont.svg" />
+    <Content Include="Form.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="images\arrow-down.png" />
+    <Content Include="images\arrow-up.png" />
+    <Content Include="images\bg-archive.jpg" />
+    <Content Include="images\bg-body.jpg" />
+    <Content Include="images\bg-border.png" />
+    <Content Include="images\bg-bottom.jpg" />
+    <Content Include="images\bg-footer.png" />
+    <Content Include="images\bg-header.jpg" />
+    <Content Include="images\bg-mid.png" />
+    <Content Include="images\bg-nav-selected.png" />
+    <Content Include="images\bg-sidebar-bottom.jpg" />
+    <Content Include="images\bg-sidebar-mid.png" />
+    <Content Include="images\bg-top.jpg" />
+    <Content Include="images\bg-triangle.jpg" />
+    <Content Include="images\blog-thumb1.png" />
+    <Content Include="images\blog-thumb2.png" />
+    <Content Include="images\blog-thumb3.png" />
+    <Content Include="images\blog-thumb4.png" />
+    <Content Include="images\eco-park.png" />
+    <Content Include="images\house.png" />
+    <Content Include="images\icons.png" />
+    <Content Include="images\kayamura.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\nature-place-photo.png" />
+    <Content Include="images\subdivision1.png" />
+    <Content Include="images\subdivision2.png" />
+    <Content Include="images\subdivision3.png" />
+    <Content Include="images\subdivision4.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Form.aspx.cs">
+      <DependentUpon>Form.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Form.aspx.designer.cs">
+      <DependentUpon>Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

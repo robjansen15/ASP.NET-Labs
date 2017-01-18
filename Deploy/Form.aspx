@@ -1,18 +1,31 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Lab1.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Form.aspx.cs" Inherits="Lab1.Form" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Lab1</title>
-    
-
+    <meta charset="UTF-8">
+	<title>Lab1</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
     <form id="form1" runat="server">
-        <div id="mainDiv">
-            
-            <%--Name--%>
+        <div id="header">
+		    <div>
+			    <a href="Home.aspx" id="logo"><img src="images/logo.png" alt="logo"></a>
+			    <ul>
+				    <li>
+					    <a href="Home.aspx">Home</a>
+				    </li>
+				    <li class="selected">
+					    <a href="Form.aspx">Form</a>
+				    </li>		   
+			    </ul>
+		    </div>
+	    </div>
+	    <div id="body" class="home">
+		    
+             <%--Name--%>
             <asp:Label runat="server" AssociatedControlID="firstName">First Name</asp:Label>
             <asp:TextBox runat="server" id="firstName"></asp:TextBox>
             
@@ -39,7 +52,15 @@
             <asp:Label runat="server">Password</asp:Label>
             <asp:TextBox runat="server" id="passwordInput" TextMode="Password"></asp:TextBox>
             
+            <br/>
             <br />
+            
+            <%--Password check--%>
+            <asp:Label runat="server" AssociatedControlID="passwordInputCheck">Confirm Password</asp:Label>
+            <asp:TextBox runat="server" id="passwordInputCheck" TextMode="Password"></asp:TextBox>
+            
+            <br />
+            <br/>
             <%--Radio buttons of gender--%>
             <asp:Label runat="server" AssociatedControlID="personGender">Gender</asp:Label>
             <asp:RadioButtonList ID="personGender" runat="server">
@@ -48,7 +69,7 @@
                  <asp:ListItem Text="Other" Value="other" />
             </asp:RadioButtonList>
 
-            <br />
+        
             <br/>
             <%--Department--%>
             <asp:Label runat="server" AssociatedControlID="department">Department</asp:Label>
@@ -76,9 +97,17 @@
             <br/>
             <br/>
             <asp:Button runat="server" id="submitBtn" Text="Submit" OnClick="Button1_Click"/>
-
-
-        </div>
+	    </div>
+	    <div id="footer">
+		    <div>
+			    <p>
+				    &#169; Rob Jansen
+			    </p>
+			    <div class="connect">
+				    <a href="http://freewebsitetemplates.com/go/googleplus/" id="googleplus">google+</a> <a href="http://www.freewebsitetemplates.com/misc/contact" id="contact">contact</a> <a href="http://freewebsitetemplates.com/go/facebook/" id="facebook">facebook</a> <a href="http://freewebsitetemplates.com/go/twitter/" id="twitter">twitter</a>
+			    </div>
+		    </div>
+	    </div>
     </form>
 </body>
 </html>
