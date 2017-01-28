@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta charset="UTF-8">
-	<title>Lab1</title>
+	<title>Lab2</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
@@ -97,6 +97,14 @@
             <br/>
             <br/>
             <asp:Button runat="server" id="submitBtn" Text="Submit" OnClick="Button1_Click"/>
+           
+
+            <br />
+            <br />
+
+            <asp:Label ID="webOutput" runat="server" Visible="false"></asp:Label>
+            <asp:Button runat="server" id="verifyButton" Text="Verify" Visible="false" OnClick="Verify_Click"/>
+            <asp:Button runat="server" id="cancelBtn" Text="Resubmit" Visible="false" OnClick="Cancel_Click"/>
 	    </div>
 	    <div id="footer">
 		    <div>
