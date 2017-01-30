@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Threading;
 
-namespace Lab1
+namespace Lab2
 {
     public partial class Form : System.Web.UI.Page
     {
@@ -89,7 +89,5 @@ namespace Lab1
             this.cancelBtn.Visible = false;
             this.webOutput.Visible = false;
         }
-
-
     }    
 }
