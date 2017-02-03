@@ -25,22 +25,20 @@
 	    </div>
 	    <div id="body" class="home">
 	        
-            <asp:ValidationSummary runat="server" ID="Summary" DisplayMode="BulletList" HeaderText="<div><b>Please review the following errors:</b></div>"/>
+            <asp:ValidationSummary runat="server" ID="Summary" DisplayMode="BulletList" HeaderText="<div><b>Please review the following errors:</b></div>" />
 		    
 
-             <%--Name--%>
-            <asp:RequiredFieldValidator ID="fname" Enabled="True" runat="server" ControlToValidate ="firstName" ErrorMessage="Please input a first name."></asp:RequiredFieldValidator>       
-            
-             <br/> 
-
+            <br /> 
             <asp:Label runat="server" AssociatedControlID="firstName">First Name</asp:Label>
             <asp:TextBox runat="server" id="firstName"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="firstNameRequired" runat="server" ControlToValidate ="firstName" ErrorMessage="Please input a first name."></asp:RequiredFieldValidator>      
             
             <br/>
             <br/>
-
+                  
             <asp:Label runat="server" AssociatedControlID="lastName">Last Name</asp:Label>
             <asp:TextBox runat="server" id="lastName"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="lastNameRequired" runat="server" ControlToValidate ="lastName" ErrorMessage="Please input a last name."></asp:RequiredFieldValidator>   
             
             <br/>
             <br/>
@@ -48,23 +46,28 @@
             <%--Email--%>
             <asp:Label runat="server" AssociatedControlID="email">Email</asp:Label>
             <asp:TextBox runat="server" id="email" TextMode="Email"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="emailRequired" runat="server" ControlToValidate ="email" ErrorMessage="Please enter an email."></asp:RequiredFieldValidator>     
             <br/>
             <br/>
             <asp:Label runat="server" AssociatedControlID="emailConfirm">Confirm Email</asp:Label>
             <asp:TextBox runat="server" id="emailConfirm" TextMode="Email"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="emailConfirmRequired" runat="server" ControlToValidate ="emailConfirm" ErrorMessage="Please confirm your email."></asp:RequiredFieldValidator>     
             
             <br/>
             <br/>
             <%--Password--%>
             <asp:Label runat="server">Password</asp:Label>
             <asp:TextBox runat="server" id="passwordInput" TextMode="Password"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="passwordRequired" runat="server" ControlToValidate ="passwordInput" ErrorMessage="Please enter a password."></asp:RequiredFieldValidator>     
             
             <br/>
             <br />
             
             <%--Password check--%>
-            <asp:Label runat="server" AssociatedControlID="passwordInputCheck">Confirm Password</asp:Label>
-            <asp:TextBox runat="server" id="passwordInputCheck" TextMode="Password"></asp:TextBox>
+            <asp:Label runat="server" AssociatedControlID="passwordInputConfirm">Confirm Password</asp:Label>
+            <asp:TextBox runat="server" id="passwordInputConfirm" TextMode="Password"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="passwordConfirmRequired" runat="server" ControlToValidate ="passwordInputConfirm" ErrorMessage="Please confirm your password."></asp:RequiredFieldValidator>     
+              
             
             <br />
             <br/>

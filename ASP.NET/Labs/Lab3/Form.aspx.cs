@@ -29,13 +29,17 @@ namespace Lab3
 
         protected void Submit_Button(object sender, EventArgs e)
         {
-            //scrape all data
+            if(Page.IsValid != true)
+            {
+                return;
+            }
+
             var firstName = this.firstName.Text;
             var lastName = this.lastName.Text;
             var email = this.email.Text;
             var emailCheck = this.emailConfirm.Text;
             var password = this.passwordInput.Text;
-            var passwordCheck = this.passwordInputCheck.Text;
+            var passwordCheck = this.passwordInputConfirm.Text;
             var gender = this.personGender.SelectedValue;
             var department = this.department.SelectedValue;
             var status = this.personStatus.SelectedValue;
