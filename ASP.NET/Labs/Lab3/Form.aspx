@@ -52,12 +52,14 @@
             <asp:Label runat="server" AssociatedControlID="emailConfirm">Confirm Email</asp:Label>
             <asp:TextBox runat="server" id="emailConfirm" TextMode="Email"></asp:TextBox>
             <asp:RequiredFieldValidator ID="emailConfirmRequired" runat="server" ControlToValidate ="emailConfirm" ErrorMessage="Please confirm your email."></asp:RequiredFieldValidator>     
-            
+            <asp:CompareValidator ID="emailEqual" runat="server" Operator="Equal" ControlToValidate="emailConfirm" ControlToCompare="email" ErrorMessage="Emails need to be the same."></asp:CompareValidator>
+
             <br/>
             <br/>
             <%--Password--%>
             <asp:Label runat="server">Password</asp:Label>
             <asp:TextBox runat="server" id="passwordInput" TextMode="Password"></asp:TextBox>
+            <asp:RegularExpressionValidator ID="string" runat="server" ControlToValidate="passwordInput" ErrorMessage="Password must have 10 characters and use both numbers and digits." ValidationExpression="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{10,}$"></asp:RegularExpressionValidator>
             <asp:RequiredFieldValidator ID="passwordRequired" runat="server" ControlToValidate ="passwordInput" ErrorMessage="Please enter a password."></asp:RequiredFieldValidator>     
             
             <br/>
@@ -65,8 +67,9 @@
             
             <%--Password check--%>
             <asp:Label runat="server" AssociatedControlID="passwordInputConfirm">Confirm Password</asp:Label>
-            <asp:TextBox runat="server" id="passwordInputConfirm" TextMode="Password"></asp:TextBox>
+            <asp:TextBox runat="server" id="passwordInputConfirm" TextMode="Password"></asp:TextBox>           
             <asp:RequiredFieldValidator ID="passwordConfirmRequired" runat="server" ControlToValidate ="passwordInputConfirm" ErrorMessage="Please confirm your password."></asp:RequiredFieldValidator>     
+            <asp:CompareValidator ID="passwordsEqual" runat="server" Operator="Equal" ControlToValidate="passwordInputConfirm" ControlToCompare="passwordInput" ErrorMessage="Passwords need to be the same."></asp:CompareValidator>
               
             
             <br />
@@ -103,7 +106,8 @@
             <%--Terms and service--%>
             <asp:Label runat="server" AssociatedControlID="agreeToTerms">Agree to Terms</asp:Label>
             <asp:CheckBox runat="server" id="agreeToTerms"/>
-            
+
+
             <br/>
             <br/>
             <asp:Button runat="server" id="submitBtn" Text="Submit" OnClick="Submit_Button"/>

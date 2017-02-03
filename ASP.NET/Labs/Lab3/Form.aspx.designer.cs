@@ -103,6 +103,15 @@ namespace Lab3 {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator emailConfirmRequired;
         
         /// <summary>
+        /// emailEqual control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator emailEqual;
+        
+        /// <summary>
         /// passwordInput control.
         /// </summary>
         /// <remarks>
@@ -110,6 +119,15 @@ namespace Lab3 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox passwordInput;
+        
+        /// <summary>
+        /// string control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator @string;
         
         /// <summary>
         /// passwordRequired control.
@@ -137,6 +155,15 @@ namespace Lab3 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator passwordConfirmRequired;
+        
+        /// <summary>
+        /// passwordsEqual control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator passwordsEqual;
         
         /// <summary>
         /// personGender control.

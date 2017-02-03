@@ -27,12 +27,20 @@ namespace Lab3
             }
         }
 
+
         protected void Submit_Button(object sender, EventArgs e)
         {
+            if(this.agreeToTerms.Checked != true)
+            {
+                acceptTerms();
+                return;
+            }
+
             if(Page.IsValid != true)
             {
                 return;
             }
+         
 
             var firstName = this.firstName.Text;
             var lastName = this.lastName.Text;
@@ -43,7 +51,6 @@ namespace Lab3
             var gender = this.personGender.SelectedValue;
             var department = this.department.SelectedValue;
             var status = this.personStatus.SelectedValue;
-            var agreementIsChecked = this.agreeToTerms.Checked;
 
 
             if (firstName.Length > 0 && lastName.Length > 0)
@@ -59,8 +66,7 @@ namespace Lab3
                     passwordCheck + "  " +
                     gender + "  " +
                     department + "  " +
-                    status + "  " +
-                    agreementIsChecked + "  ");
+                    status + "  ");
 
                 this.submitBtn.Visible = false;
                 this.verifyButton.Visible = true;
@@ -92,9 +98,7 @@ namespace Lab3
 
         protected void Verify_Click(object sender, EventArgs e)
         {
-            Response.Write("<script>alert('" + "Thank You for submitting the form!" +
-                   "');</script>");
-
+            Response.Write("<script>alert('" + "Thank You for submitting the form!" + "');</script>");
         }
 
 
@@ -105,5 +109,12 @@ namespace Lab3
             this.cancelBtn.Visible = false;
             this.webOutput.Visible = false;
         }
-    }    
+
+        protected void acceptTerms()
+        {
+            Response.Write("<script>alert('" + "Agree to the terms before continuing!" + "');</script>");
+        }
+
+
+    }
 }
