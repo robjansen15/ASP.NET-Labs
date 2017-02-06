@@ -44,7 +44,7 @@ namespace Lab3
 
             if (firstName.Length > 0 && lastName.Length > 0)
             {
-                //output data
+                //output
                 this.webOutput.Text = "";
                 this.webOutput.Text += ("Please look at the information you submitted and check if this is correct: " +
                     firstName + "  " +

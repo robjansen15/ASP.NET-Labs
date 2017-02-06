@@ -32,6 +32,7 @@ namespace Lab2
 
             if (firstName.Length > 0 && lastName.Length > 0)
             {
+                this.myPanel.Visible = false;
                 //output data
                 this.webOutput.Text = "";
                 this.webOutput.Text += ("Please look at the information you submitted and check if this is correct: " +
@@ -85,6 +86,7 @@ namespace Lab2
         protected void Cancel_Click(object sender, EventArgs e)
         {
             this.submitBtn.Visible = true;
+            this.myPanel.Visible = true;
             this.verifyButton.Visible = false;
             this.cancelBtn.Visible = false;
             this.webOutput.Visible = false;
