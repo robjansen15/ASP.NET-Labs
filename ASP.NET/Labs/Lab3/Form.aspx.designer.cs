@@ -31,15 +31,6 @@ namespace Lab3 {
         protected global::System.Web.UI.WebControls.ValidationSummary Summary;
         
         /// <summary>
-        /// fname control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator fname;
-        
-        /// <summary>
         /// firstName control.
         /// </summary>
         /// <remarks>
@@ -47,6 +38,15 @@ namespace Lab3 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox firstName;
+        
+        /// <summary>
+        /// firstNameRequired control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator firstNameRequired;
         
         /// <summary>
         /// lastName control.
@@ -58,6 +58,15 @@ namespace Lab3 {
         protected global::System.Web.UI.WebControls.TextBox lastName;
         
         /// <summary>
+        /// lastNameRequired control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator lastNameRequired;
+        
+        /// <summary>
         /// email control.
         /// </summary>
         /// <remarks>
@@ -65,6 +74,15 @@ namespace Lab3 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox email;
+        
+        /// <summary>
+        /// emailRequired control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator emailRequired;
         
         /// <summary>
         /// emailConfirm control.
@@ -76,6 +94,24 @@ namespace Lab3 {
         protected global::System.Web.UI.WebControls.TextBox emailConfirm;
         
         /// <summary>
+        /// emailConfirmRequired control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator emailConfirmRequired;
+        
+        /// <summary>
+        /// emailEqual control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator emailEqual;
+        
+        /// <summary>
         /// passwordInput control.
         /// </summary>
         /// <remarks>
@@ -85,13 +121,49 @@ namespace Lab3 {
         protected global::System.Web.UI.WebControls.TextBox passwordInput;
         
         /// <summary>
-        /// passwordInputCheck control.
+        /// string control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox passwordInputCheck;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator @string;
+        
+        /// <summary>
+        /// passwordRequired control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator passwordRequired;
+        
+        /// <summary>
+        /// passwordInputConfirm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox passwordInputConfirm;
+        
+        /// <summary>
+        /// passwordConfirmRequired control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator passwordConfirmRequired;
+        
+        /// <summary>
+        /// passwordsEqual control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator passwordsEqual;
         
         /// <summary>
         /// personGender control.
