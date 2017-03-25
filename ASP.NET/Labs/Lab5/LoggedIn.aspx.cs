@@ -59,6 +59,24 @@ namespace Lab5
 
         protected void changePassword_Click(object sender, EventArgs e)
         {
+            LoginObj login = new LoginObj(this.username.Value, this.password.Value);
+            login = new DatabaseConnection().ValidateLogin(login);
+
+            if (login._Authenticated)
+            {
+                new DatabaseConnection().UpdatePassword(this.username.Value.Trim(), this.newpassword.Value.Trim());
+                this.myPanel.Visible = false;
+                Response.Write("<script>alert('" + "Password changed to: " + this.newpassword.Value + "')</script>");
+
+                login._Authenticated = false;
+                Response.Redirect("/login.aspx");
+
+            }
+            else
+            {
+                Response.Write("<script>alert('" + "Login failed, potentially bad credentials." + "')</script>");
+            }
+
 
         }
 

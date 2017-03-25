@@ -31,23 +31,27 @@
              <asp:ValidationSummary runat="server" ID="Summary" DisplayMode="BulletList" HeaderText="<div><b>Please review the following errors:</b></div>" />
 
             <br />
+            <label runat="server" for="username">Username</label>
             <input id="username" runat="server" placeholder="username" />
              <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate ="username" ErrorMessage="Please enter your username"></asp:RequiredFieldValidator>     
            
             
             <br />
-            <input id="password" runat="server" placeholder="current password" />
+             <label runat="server" for="password">Current Password</label>
+            <input type="password" id="password" runat="server" placeholder="current password" />
           <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate ="password" ErrorMessage="Please enter your current password"></asp:RequiredFieldValidator>     
             
             
             <br />
-            <input id="newpassword" runat="server" placeholder="new password" />
+            <label runat="server" for="newpassword">New Password</label>
+            <input type="password" id="newpassword" runat="server" placeholder="new password" />
             <asp:RegularExpressionValidator ID="string" runat="server" ControlToValidate="newpassword" ErrorMessage="Password must have 10 characters and use both numbers and digits." ValidationExpression="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{10,}$"></asp:RegularExpressionValidator>
             <asp:RequiredFieldValidator ID="passwordRequired" runat="server" ControlToValidate ="newpassword" ErrorMessage="Please enter a password."></asp:RequiredFieldValidator>     
             
             
             <br />
-            <input id="confirmpassword" runat="server" placeholder="confirm new password" />
+            <label runat="server" for="confirmpassword">Confirm New Password</label>
+            <input type="password" id="confirmpassword" runat="server" placeholder="confirm new password" />
               <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate ="confirmpassword" ErrorMessage="Please confirm your password"></asp:RequiredFieldValidator>  
             <asp:CompareValidator ID="passwordsEqual" runat="server" Operator="Equal" ControlToValidate="newpassword" ControlToCompare="confirmpassword" ErrorMessage="Passwords need to be the same."></asp:CompareValidator>
             <br />

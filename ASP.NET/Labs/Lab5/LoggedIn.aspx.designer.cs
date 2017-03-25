@@ -100,7 +100,7 @@ namespace Lab5 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText password;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword password;
         
         /// <summary>
         /// RequiredFieldValidator2 control.
@@ -118,7 +118,7 @@ namespace Lab5 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText newpassword;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword newpassword;
         
         /// <summary>
         /// string control.
@@ -145,7 +145,7 @@ namespace Lab5 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText confirmpassword;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword confirmpassword;
         
         /// <summary>
         /// RequiredFieldValidator1 control.

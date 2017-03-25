@@ -96,6 +96,32 @@ namespace Lab5
         }
 
 
+        public void UpdatePassword(string username, string password)
+        {
+            try
+            {
+                Connect();
+                SqlCommand command = new SqlCommand("ChangePassword", _Connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                //Add as many parameters as you want
+                command.Parameters.Add(new SqlParameter("@USER", username));
+                command.Parameters.Add(new SqlParameter("@NEWPASS", password));
+
+                command.ExecuteNonQuery();
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                Disconnect();
+            }
+
+        }
+
+
         public void UpdateCode(string username)
         {
             try
