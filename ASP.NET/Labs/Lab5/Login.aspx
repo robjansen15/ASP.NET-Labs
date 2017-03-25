@@ -36,7 +36,7 @@
             </div>
             <label class="checkbox">
                 <input type="checkbox" value="remember-me" />Remember me
-                <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
+                <asp:Linkbutton runat="server" class="pull-right" ID="forgot" OnClick="forgot_Click">Forgot Password?</asp:Linkbutton>
             </label>
             <asp:LinkButton class="btn btn-primary btn-lg btn-block" runat="server" onclick="BtnClick_Login">Login</asp:LinkButton>
             <asp:LinkButton class="btn btn-info btn-lg btn-block" runat="server" onclick="BtnClick_SignUp">Signup</asp:LinkButton>

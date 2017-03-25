@@ -96,6 +96,30 @@ namespace Lab5
         }
 
 
+        public void UpdateCode(string username)
+        {
+            try
+            {
+                Connect();
+                SqlCommand command = new SqlCommand("UpdateVerification", _Connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                //Add as many parameters as you want
+                command.Parameters.Add(new SqlParameter("@EMAIL", username));
+
+                command.ExecuteNonQuery();
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                Disconnect();
+            }
+
+        }
+
         
         public string RandomString(int length)
         {

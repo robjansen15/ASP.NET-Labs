@@ -9,14 +9,24 @@ execute CreateUser
 
 ALTER PROCEDURE [dbo].[CheckLogin]
 	@USER varchar(50),
-	@PASS varchar(50),
+	@PASS varchar(50)
 AS
-	SELECT* from Login
+	SELECT * from Login
 	where EMAIL = @USER
-	and PASSWORD = @PASS
-	and CONFIRM_REG = 'yes';
+	and PASSWORD = @PASS;
 
 RETURN 0
+
+
+CREATE PROCEDURE [dbo].[UpdateVerification]
+	@USER varchar(50)
+AS
+	Update Login
+	SET CONFIRM_REG = 'yes'
+	where EMAIL = @USER
+
+RETURN 0
+
 
 
 ALTER PROCEDURE [dbo].[CreateUser]

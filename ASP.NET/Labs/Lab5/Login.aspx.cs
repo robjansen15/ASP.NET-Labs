@@ -20,7 +20,7 @@ namespace Lab5
 
         protected void BtnClick_SignUp(object sender, EventArgs e)
         {
-
+            Response.Redirect("/Registration.aspx");
         }
 
 
@@ -40,13 +40,23 @@ namespace Lab5
 
             if (login._Authenticated)
             {
-                //redirect to the new page
+                //randomly generated activation code 
+                new DatabaseConnection().UpdateCode(login._Username);
+
+                //redirect to the protected page     
                 Response.Redirect("/LoggedIn.aspx");
             }
             else
             {
                 //propt user credentials are bad
+                Response.Write("<script>alert('" + "Login failed, potentially bad credentials." + "')</script>");
             }
+        }
+
+
+        protected void forgot_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

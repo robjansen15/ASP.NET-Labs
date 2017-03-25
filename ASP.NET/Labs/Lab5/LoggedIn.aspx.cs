@@ -33,7 +33,18 @@ namespace Lab5
 
             if (!IsPostBack)
             {
-                
+                this.myPanel.Visible = false;
+
+                string JQueryVer = "1.7.1";
+                ScriptManager.ScriptResourceMapping.AddDefinition("jquery", new ScriptResourceDefinition
+                {
+                    Path = "~/Scripts/jquery-" + JQueryVer + ".min.js",
+                    DebugPath = "~/Scripts/jquery-" + JQueryVer + ".js",
+                    CdnPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-" + JQueryVer + ".min.js",
+                    CdnDebugPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-" + JQueryVer + ".js",
+                    CdnSupportsSecureConnection = true,
+                    LoadSuccessExpression = "window.jQuery"
+                });
             }
         }
 
@@ -49,6 +60,20 @@ namespace Lab5
         protected void changePassword_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        protected void visiblePanel_Click(object sender, EventArgs e)
+        {
+            if (this.myPanel.Visible)
+            {
+                this.myPanel.Visible = false;
+            }
+            else
+            {
+                this.myPanel.Visible = true;
+            }
+                
         }
     }
 }

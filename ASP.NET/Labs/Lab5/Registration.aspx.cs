@@ -23,6 +23,9 @@ namespace Lab5
 
             string generated = new DatabaseConnection().CreateUser(firstname, lastname, email, pass);
 
+            Response.Write("<script>alert('" + "Your verification string is: " + generated + "')</script>");
+
+            Response.Redirect("/Login.aspx");
         }
     }
 }
